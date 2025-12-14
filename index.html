@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Urban Nexus – Future Cities</title>
+
+<style>
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: radial-gradient(circle at top, #0b1a2e, #000814);
+    color:#eaeaea;
+    overflow-x:hidden;
+}
+
+/* STAR BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: stars 80s linear infinite;
+    opacity:0.4;
+    z-index:-1;
+}
+
+@keyframes stars{
+    from{ transform:translateY(0); }
+    to{ transform:translateY(-1200px); }
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+
+nav h2{
+    color:#00e5ff;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* SECTIONS */
+section{
+    min-height:100vh;
+    padding:120px 10%;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3.6rem;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#00e5ff;
+}
+
+.hero p{
+    font-size:1.2rem;
+    opacity:0.85;
+}
+
+/* TITLES */
+.section-title{
+    font-size:2.5rem;
+    margin-bottom:20px;
+    color:#00e5ff;
+}
+
+/* GRID */
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:rgba(255,255,255,0.06);
+    padding:30px;
+    border-radius:16px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 25px rgba(0,229,255,0.45);
+}
+
+/* IMAGES */
+.image-box{
+    margin-top:40px;
+}
+
+.image-box img{
+    width:100%;
+    border-radius:18px;
+    transition:0.4s;
+}
+
+.image-box img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(0,229,255,0.5);
+}
+
+/* TIMELINE STYLE */
+.timeline{
+    margin-top:40px;
+    border-left:2px solid #00e5ff;
+    padding-left:30px;
+}
+
+.timeline div{
+    margin-bottom:30px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.6);
+    font-size:0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h2>Urban Nexus</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#cities">Cities</a>
+        <a href="#technology">Technology</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div>
+        <h1>Building the <span>Cities of Tomorrow</span></h1>
+        <p>Futuristic • Sustainable • Human-Centric Urban Living</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">Who We Are</h2>
+    <p>
+        Urban Nexus is a next-generation real estate corporation designing and
+        building fully planned futuristic cities from the ground up.
+        Our mission is to create urban environments that are
+        sustainable, beautiful, efficient, and deeply livable.
+    </p>
+
+    <div class="image-box">
+        <!-- LOGO -->
+        <img src="log.jpeg" alt="Urban Nexus Logo">
+    </div>
+
+    <div class="image-box">
+        <!-- ENGINEERS IMAGE -->
+        <img src="eng.jpeg" alt="Engineers at Urban Nexus HQ">
+    </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities">
+    <h2 class="section-title">Our Planned Cities</h2>
+
+    <div class="card-grid">
+        <div class="card">🌱 Zero-Net Emission Infrastructure</div>
+        <div class="card">🧭 Grid-Based Urban Layout</div>
+        <div class="card">🚆 Autonomous & Public Mobility</div>
+        <div class="card">🏡 Walkable Green Communities</div>
+        <div class="card">⚡ Renewable Energy Districts</div>
+        <div class="card">🌐 Smart Governance Systems</div>
+    </div>
+
+    <div class="timeline">
+        <div>
+            <h3>Phase 1 – Master Planning</h3>
+            <p>Land selection, grid layout, sustainability modeling</p>
+        </div>
+        <div>
+            <h3>Phase 2 – Infrastructure</h3>
+            <p>Energy, transport, water, digital backbone</p>
+        </div>
+        <div>
+            <h3>Phase 3 – Community Living</h3>
+            <p>Residential zones, green spaces, public services</p>
+        </div>
+    </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+    <h2 class="section-title">Technology & Sustainability</h2>
+
+    <div class="card-grid">
+        <div class="card">AI-Driven City Management</div>
+        <div class="card">Digital Twins for Urban Planning</div>
+        <div class="card">Waste-to-Energy Systems</div>
+        <div class="card">Smart Water Recycling</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Trusted by Communities</h2>
+
+    <div class="image-box">
+        <!-- CUSTOMERS IMAGE -->
+        <img src="cus.jpeg" alt="Urban Nexus Team Talking With Customers">
+    </div>
+
+    <div style="margin-top:40px;">
+        <p><strong>Email:</strong> connect@urbannexus.com</p>
+        <p><strong>LinkedIn:</strong> Urban Nexus</p>
+        <p><strong>Instagram:</strong> @urbannexus</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Urban Nexus — Designing the Future of Urban Living
+</footer>
+
+</body>
+</html>
